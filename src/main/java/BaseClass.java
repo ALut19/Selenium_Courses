@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
     public WebDriver driver;
-
+/*
     @org.junit.Before
     public  void webdriver() {
         System.setProperty("webdriver.chrome.driver", "C:/Java/Selenium_Lut/driver/chromedriver_win32/chromedriver.exe");
@@ -17,5 +17,5 @@ public class BaseClass {
         driver.get("http://www.sberbank.ru/ru/person");
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-    }
+    }*/
 }
