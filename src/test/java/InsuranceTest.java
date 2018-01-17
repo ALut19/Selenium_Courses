@@ -7,5 +7,6 @@ public class InsuranceTest extends BaseClass {
     public void Test(){
 
         mainPage = new MainPage(driver);
+        mainPage.mainPageActions();
     }
 }
