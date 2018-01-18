@@ -21,7 +21,7 @@ public class Sber_Task_1 {
     @Test
     public void main () throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "C:/Users/user/IdeaProjects/Selenium_Courses/driver/chromedriver_win32/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Java\\Selenium_Lut\\driver\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         WebDriver driver = new ChromeDriver(options);
