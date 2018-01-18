@@ -1,12 +1,11 @@
-import org.junit.Test;
+public class InsuranceTest extends BaseClass{
 
-public class InsuranceTest extends BaseClass {
-    MainPage MainPage;
+    MainPage mainPage;
 
-    @Test
-    public void Test(){
+    @org.junit.Test
+    public void Test() {
 
-        MainPage = new MainPage(driver);
-        MainPage.mainPageActions();
+        mainPage = new MainPage(driver);
+        mainPage.mainPageActions();
     }
 }
