@@ -84,6 +84,8 @@ public class Issue extends BaseClass {
         issuedDoc.sendKeys(issuedDoc1);
         Assert.assertEquals("ОВД г. Тамбов", issuedDoc.getAttribute("value"));
     }
+
+
     // 10. Нажать продолжить
     public void setContin2(){contin2.click();}
     // 11. Проверить, что появилось сообщение - Заполнены не все обязательные поля
