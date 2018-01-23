@@ -1,4 +1,7 @@
-public class InsuranceTest extends BaseClass{
+package Task2;
+
+
+public class InsuranceTest extends BaseClass {
     MainPage mainPage;
     SelectPolicy selectPolicy;
     Issue issue;
