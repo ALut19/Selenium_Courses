@@ -1,9 +1,11 @@
+package pages;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import steps.BaseClass;
 
 public class Issue2 extends BaseClass {
 
@@ -47,36 +49,47 @@ public class Issue2 extends BaseClass {
         switch (fieldName) {
             case "Фамилия":
                 fillField(surnameEng, value);
+                Assert.assertEquals("IVANOV", surnameEng.getAttribute("value"));
                 break;
             case "Имя":
                 fillField(nameEng, value);
+                Assert.assertEquals("IVAN", nameEng.getAttribute("value"));
                 break;
             case "Дата рождения":
                 fillField(birthdate, value);
+                Assert.assertEquals("10.10.1980", birthdate.getAttribute("value"));
                 break;
             case "Фамилия страхователя":
                 fillField(issuerSurname, value);
+                Assert.assertEquals("Петров", issuerSurname.getAttribute("value"));
                 break;
             case "Имя страхователя":
                 fillField(issuerFirstname, value);
+                Assert.assertEquals("Петр", issuerFirstname.getAttribute("value"));
                 break;
             case "Отчество страхователя":
                 fillField(issuerMiddlename, value);
+                Assert.assertEquals("Петрович", issuerMiddlename.getAttribute("value"));
                 break;
             case "Дата рождения страхователя":
                 fillField(birthdate2, value);
+                Assert.assertEquals("01.01.1991", birthdate2.getAttribute("value"));
                 break;
             case "Серия паспорта":
                 fillField(serDoc, value);
+                Assert.assertEquals("1359", serDoc.getAttribute("value"));
                 break;
             case "Номер паспорта":
             fillField(numDoc, value);
+                Assert.assertEquals("123579", numDoc.getAttribute("value"));
             break;
             case "Дата выдачи":
                 fillField(actDocDate, value);
+                Assert.assertEquals("02.10.2008", actDocDate.getAttribute("value"));
                 break;
             case "Кем выдан":
                 fillField(issuedDoc, value);
+                Assert.assertEquals("ОВД г. Тамбов", issuedDoc.getAttribute("value"));
                 break;
         }
     }

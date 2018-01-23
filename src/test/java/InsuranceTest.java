@@ -1,5 +1,8 @@
-package Task2;
-
+import org.junit.Ignore;
+import steps.BaseClass;
+import pages.Issue;
+import pages.MainPage;
+import pages.SelectPolicy;
 
 public class InsuranceTest extends BaseClass {
     MainPage mainPage;
@@ -7,6 +10,7 @@ public class InsuranceTest extends BaseClass {
     Issue issue;
 
     @org.junit.Test
+    @Ignore
     public void Test() {
 
         mainPage = new MainPage(driver);
