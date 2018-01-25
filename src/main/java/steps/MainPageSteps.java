@@ -1,9 +1,11 @@
 package steps;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pages.MainPage;
+import ru.yandex.qatools.allure.annotations.Step;
 
-import net.thucydides.core.annotations.Step;
+
 
 public class MainPageSteps extends BaseClass {
 
