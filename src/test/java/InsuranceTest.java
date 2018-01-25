@@ -1,4 +1,5 @@
 import org.junit.Ignore;
+import org.junit.Test;
 import steps.BaseClass;
 import pages.Issue;
 import pages.MainPage;
@@ -9,7 +10,7 @@ public class InsuranceTest extends BaseClass {
     SelectPolicy selectPolicy;
     Issue issue;
 
-    @org.junit.Test
+    @Test
     @Ignore
     public void Test() {
 

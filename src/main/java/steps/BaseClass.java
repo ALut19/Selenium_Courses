@@ -14,7 +14,7 @@ public class BaseClass {
 
     @org.junit.Before
     public void webDriver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\IdeaProjects\\Selenium_Courses\\driver\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Java\\Selenium_Lut\\driver\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions co = new ChromeOptions();
         co.addArguments("start-maximized");
         driver = new ChromeDriver(co);
