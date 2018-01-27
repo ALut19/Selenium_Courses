@@ -14,22 +14,22 @@ public class MainPageSteps extends BaseClass {
         this.driver = driver;
     }
 
-    @Step("Выбран пункт меню {0}")
+    @Step("Выбран пункт меню Застраховать себя и имущество")
     public void stepSetInsurenceMenu (){
         new MainPage (driver).setInsurenceMenu();
     }
 
-    @Step("Выбран пункт Cтрахование путешествинников {0}")
+    @Step("Выбран пункт Cтрахование путешествинников")
     public void stepSetInsuranseTravel (){
         new MainPage (driver).setInsuranseTravel();
     }
 
-    @Step("На странице присутсвует заголовок Cтрахование путешествинников {0}")
+    @Step("На странице присутсвует заголовок Cтрахование путешествинников")
     public void stepSetTitle (){
         new MainPage (driver).setTitle();
     }
 
-    @Step("Нажата кнопка Оформить Онлайн {0}")
+    @Step("Нажата кнопка Оформить Онлайн")
     public void stepSetOnlineIssue (){
         new MainPage (driver).setOnlineIssue();
     }

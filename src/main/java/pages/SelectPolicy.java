@@ -29,7 +29,7 @@ public class SelectPolicy extends BaseClass {
         }
     }
     // 7. Нажать Оформить
-    public void setContin(){
+    public void setContin (){
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", contin);
         contin.click();}
 
