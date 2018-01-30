@@ -13,7 +13,13 @@ import java.util.concurrent.TimeUnit;
 
 
 public class BaseClass {
-    public WebDriver driver;
+
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
+    public static WebDriver driver;
 
     @Before
     public void webDriver() {

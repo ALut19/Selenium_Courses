@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class MainPage extends BaseClass {
+public class MainPage extends BasePageObject {
 
     @FindBy(xpath = "//a[@aria-label='Раздел Застраховать себя  и имущество']")
     WebElement insurenceMenu;
@@ -24,9 +24,9 @@ public class MainPage extends BaseClass {
 
 
     // 1. Перейти на страницу http://www.sberbank.ru/ru/person
-    public MainPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+    public MainPage() {
+        PageFactory.initElements(BaseClass.getDriver(), this);
+
     }
     // 2. Нажать на – Застраховать себя и имущество
     public void setInsurenceMenu(){
@@ -43,9 +43,9 @@ public class MainPage extends BaseClass {
     // 5. Нажать на – Оформить Онлайн
     public void setOnlineIssue(){
         onlineIssue.click();
-        Set<String> wh = driver.getWindowHandles();
+        Set<String> wh = BaseClass.getDriver().getWindowHandles();
         List<String> whl=new ArrayList<>(wh);
-        driver.switchTo().window(whl.get(1));
+        BaseClass.getDriver().switchTo().window(whl.get(1));
     }
 
 

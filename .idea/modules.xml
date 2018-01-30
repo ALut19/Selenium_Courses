@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Selenium_Lut_AllTasks.iml" filepath="$PROJECT_DIR$/Selenium_Lut_AllTasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Selenium_Lut.iml" filepath="$PROJECT_DIR$/Selenium_Lut.iml" />
     </modules>
   </component>
 </project>
