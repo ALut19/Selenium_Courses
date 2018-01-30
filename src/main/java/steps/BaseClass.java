@@ -1,13 +1,13 @@
 package steps;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.PageFactory;
+
 
 import java.util.concurrent.TimeUnit;
 

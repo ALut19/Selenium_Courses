@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Selenium_Lut" />
+        <module name="Selenium_Lut_AllTasks" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Selenium_Lut" target="1.8" />
+      <module name="Selenium_Lut_AllTasks" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
