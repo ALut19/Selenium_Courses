@@ -1,6 +1,9 @@
 package steps;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import javax.xml.crypto.Data;
 
 public class ScenarioSteps {
 
@@ -8,7 +11,7 @@ public class ScenarioSteps {
     SelectPolicySteps selectPolicySteps = new SelectPolicySteps();
     Issue2Steps issue2Steps = new Issue2Steps();
 
-    @When("^выбран пункт меню \"(.*)\"$")
+    @When("^выбран пункт меню глвной страницы \"(.*)\"$")
     public void stepSetInsurenceMenu(String name){mainPageSteps.stepSetInsurenceMenu();}
 
     @When("выбран вид страхования - \"(.*)\"")
@@ -24,4 +27,23 @@ public class ScenarioSteps {
         mainPageSteps.stepSetOnlineIssue();
     }
 
+    @When("^выбран пункт меню страницы формы страховки \"(.*)\"$")
+    public void stepSetMinInsurance(String name) {selectPolicySteps.stepSetMinInsurance();}
+
+    @Then("выполнено жмакание на кнопку Оформить")
+    public void stepSetContin(){
+        selectPolicySteps.stepSetContin();
+    }
+
+    @When("заполняются поля:")
+    public void stepFillField(DataTable fields) {
+        fields.asMap(String.class, String.class).forEach(
+                (fieldName, value) -> issue2Steps.stepFillField(fieldName, value));}
+
+    @When("выполнено тыкание на кнопку Продолжить")
+    public void stepSetContin2 () { issue2Steps.stepSetContin2();}
+
+    @Then("появился текст ошибки")
+    public void steSetErrorMassage () { issue2Steps.steSetErrorMassage(); }
 }
+
