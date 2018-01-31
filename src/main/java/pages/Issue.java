@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import steps.BaseClass;
 
-public class Issue extends BaseClass {
+public class Issue extends BasePageObject {
 
     @FindBy(xpath = "//input[@ng-model='namespace.SURNAME_ENG']")
     WebElement surnameEng;
@@ -39,9 +39,9 @@ public class Issue extends BaseClass {
 
     //8. На вкладке Оформить заполнить поля:
     // 9. Проверить, что все поля заполнены правильно
-    public Issue(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+    public Issue() {
+        PageFactory.initElements(BaseClass.getDriver(), this);
+        //this.driver = driver;
     }
 
     public void setSurnameEng(String surnameEng1){
