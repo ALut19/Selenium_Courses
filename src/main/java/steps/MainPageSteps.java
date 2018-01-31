@@ -8,12 +8,8 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 
 public class MainPageSteps {
-
-
-    @Step("Выбран пункт меню Застраховать себя и имущество")
-    public void stepSetInsurenceMenu (){
-        new MainPage ().setInsurenceMenu();
-    }
+    @Step("Выбран пункт меню Застраховать себя и имущество {0}")
+    public void stepSetInsurenceMenu (){new MainPage ().setInsurenceMenu();}
 
     @Step("Выбран пункт Cтрахование путешествинников")
     public void stepSetInsuranseTravel (){
@@ -21,9 +17,7 @@ public class MainPageSteps {
     }
 
     @Step("На странице присутсвует заголовок Cтрахование путешествинников")
-    public void stepSetTitle (){
-        new MainPage ().setTitle();
-    }
+    public void stepSetTitle (){new MainPage ().setTitle();}
 
     @Step("Нажата кнопка Оформить Онлайн")
     public void stepSetOnlineIssue (){

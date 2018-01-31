@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>Selenium_Lut</groupId>
     <artifactId>Selenium_Lut</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -31,24 +30,20 @@
                 <version>2.19.1</version>
                 <configuration>
                     <includes>
+                        <include>**/CucumberRunner.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
-                        -Dfile.encoding=UTF-8 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        -Dfile.encoding=UTF-8
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-                    <properties>
-                        <property>
-                        <name>listener</name>
-                        <value>util.AllureReporter</value>
-                        </property>
-                    </properties>
                 </configuration>
                 <dependencies>
-                <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjweaver</artifactId>
-                    <version>${aspectj.version}</version>
-                </dependency>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
                 </dependencies>
             </plugin>
             <plugin>
@@ -70,10 +65,15 @@
 
     <dependencies>
         <dependency>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-compiler-plugin</artifactId>
-<version>3.7.0</version>
-</dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+        </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -83,16 +83,6 @@
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-cucumber-jvm-adaptor</artifactId>
             <version>1.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>3.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-support</artifactId>
-            <version>3.8.1</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -109,11 +99,6 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.21</version>
         </dependency>
-        <dependency>
-<groupId>net.serenity-bdd</groupId>
-<artifactId>serenity-junit</artifactId>
-<version>1.8.21</version>
-</dependency>
     </dependencies>
 </project>
 
@@ -122,48 +107,69 @@
 
 
 
+<!--property>
+<name>listener</name>
+<value>util.AllureReporter</value>
+</property-->
 
 
-<!--dependency>
-<groupId>org.apache.cassandra</groupId>
-<artifactId>cassandra-all</artifactId>
-<version>0.8.1</version>
-<exclusions>
-    <exclusion>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-remote-driver</artifactId>
-    </exclusion>
-    <exclusion>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-api</artifactId>
-    </exclusion>
-    <exclusion>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-    </exclusion>
-    <exclusion>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-log4j12</artifactId>
-    </exclusion>
-    <exclusion>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
-    </exclusion>
-</exclusions>
-</dependency-->
 
-<!--dependency>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-compiler-plugin</artifactId>
-<version>3.7.0</version>
-</dependency-->
-<!--dependency>
-<groupId>net.serenity-bdd</groupId>
-<artifactId>serenity-core</artifactId>
-<version>1.8.21</version>
-</dependency-->
+
 <!--dependency>
 <groupId>net.serenity-bdd</groupId>
 <artifactId>serenity-junit</artifactId>
 <version>1.8.21</version>
 </dependency-->
+<!--dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-api</artifactId>
+<version>3.8.1</version>
+</dependency>
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-support</artifactId>
+<version>3.8.1</version>
+</dependency-->
+        <!--dependency>
+        <groupId>org.apache.cassandra</groupId>
+        <artifactId>cassandra-all</artifactId>
+        <version>0.8.1</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-remote-driver</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-api</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+            </exclusion>
+        </exclusions>
+        </dependency-->
+
+        <!--dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        </dependency-->
+        <!--dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-core</artifactId>
+        <version>1.8.21</version>
+        </dependency-->
+        <!--dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-junit</artifactId>
+        <version>1.8.21</version>
+        </dependency-->
